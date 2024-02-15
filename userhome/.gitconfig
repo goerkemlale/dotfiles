@@ -1,0 +1,10 @@
+[init]
+	defaultBranch = main
+
+[core]
+	editor = vi
+
+[user]
+	name = goerkemlale
+	mail = goerkemlale@gmail.com
+
