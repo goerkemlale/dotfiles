@@ -13,6 +13,8 @@ then give to GitHub
 # Gaming
 ## GPU
 
+Installed GPU drivers with 32bit
+
 Game optimization
 ## Lutris
 - **Disable Compositor:** Preferences -> Global Options -> Disable desktop effects
