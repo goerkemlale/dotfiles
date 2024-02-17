@@ -8,7 +8,7 @@ dpkg --add-architecture i386
 
 #Essentials
 sudo apt update -y && sudo apt upgrade
-sudo apt install -y curl aria2 wget git python3 ca-certificates
+sudo apt install -y curl aria2 wget git python3 python3-venv ca-certificates
 sudo apt install flatpak plasma-discover-backend-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
@@ -23,9 +23,10 @@ apt-fast install linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-
 # publii
 
 # Coding
-INS_CODING="neovim"
+INS_CODING=""
 bash ./sys/coding/install_docker.sh
 bash ./sys/coding/install_asdf.sh
+bash ./sys/coding/install_neovim.sh
 
 # Creative
 INS_CREATIVE="kdenlive gimp obs-studio"
