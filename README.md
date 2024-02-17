@@ -11,6 +11,7 @@ cat ~/.ssh/id_ed25519.pub
 then give to GitHub
 
 # Gaming
+## GPU
 
 Game optimization
 ## Lutris
