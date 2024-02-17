@@ -7,7 +7,7 @@ DOCKERGPGNET="https://download.docker.com/linux/debian/gpg"
 DOCKERGPGLOCAL="/etc/apt/keyrings/docker.asc"
 DOCKERPACKAGE="docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin"
 for pkg in $DOCKERDEPR; \
-do sudo apt-fast remove $pkg; done
+do sudo apt-fast -y remove $pkg; done
 sudo curl -fsSL $DOCKERGPGNET -o $DOCKERGPGLOCAL \
 && sudo chmod a+r  $DOCKERGPGLOCAL
 
@@ -16,5 +16,5 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=$DOCKERGPGLOCAL] $DOCKERDEB \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-fast update
-sudo apt-fast install $DOCKERPACKAGE
+sudo apt-fast -y update
+sudo apt-fast -y install $DOCKERPACKAGE

@@ -1,23 +1,23 @@
 #!/bin/bash
 
 # sources.list
-sudo apt-add-repository contrib
-sudo apt-add-repository non-free-firmware
-sudo apt-add-repository bookworm-backports
+sudo apt-add-repository -y contrib
+sudo apt-add-repository -y non-free-firmware
+sudo apt-add-repository -y bookworm-backports
 dpkg --add-architecture i386
 
 #Essentials
 sudo apt update -y && sudo apt upgrade
-sudo apt install -y curl aria2 wget git python3 python3-venv ca-certificates
-sudo apt install flatpak plasma-discover-backend-flatpak
+sudo apt install -y curl aria2 wget git python3 python3-venv ca-certificates flatpak plasma-discover-backend-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Install apt-fast
+export PATH=$PATH:/usr/local/sbin/
 sudo /bin/bash -c "$(curl -sL https://git.io/vokNn)"
 
 # GPU
 
-apt-fast install linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-cuda-dev nvidia-cuda-toolkit nvidiadriver-libs:i386 libnvoptix1
+apt-fast install -y linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-cuda-dev nvidia-cuda-toolkit nvidiadriver-libs:i386 libnvoptix1
 
 # Apps
 # publii
