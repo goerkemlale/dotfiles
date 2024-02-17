@@ -7,14 +7,13 @@ sudo apt install -y curl aria2 wget git python3 ca-certificates
 # Install apt-fast
 sudo /bin/bash -c "$(curl -sL https://git.io/vokNn)"
 
-#Install Docker
-bash ./sys/install_docker.sh
-
 # Apps
 # publii
 
 # Coding
-INS_CODING="neovim asdf"
+INS_CODING="neovim"
+bash ./sys/coding/install_docker.sh
+bash ./sys/coding/install_asdf.sh
 
 # Creative
 INS_CREATIVE="kdenlive gimp"
