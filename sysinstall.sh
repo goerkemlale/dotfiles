@@ -15,6 +15,10 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Install apt-fast
 sudo /bin/bash -c "$(curl -sL https://git.io/vokNn)"
 
+# GPU
+
+apt-fast install linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-cuda-dev nvidia-cuda-toolkit nvidiadriver-libs:i386 libnvoptix1
+
 # Apps
 # publii
 
