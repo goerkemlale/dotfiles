@@ -1,6 +1,9 @@
 # dotfiles
 Configuration home
 
+1. First do sysinstall
+2. Then dotinstall.sh
+
 ## Git
 Forget HTTPS, just use SSH
 
@@ -9,6 +12,14 @@ ssh-keygen -t ed25519 -C "mymail"
 cat ~/.ssh/id_ed25519.pub
 
 then give to GitHub
+
+# Tmux
+C-b I to Install
+
+# Neovim
+
+Run once *nvim*
+Theme: yoru
 
 # Gaming
 ## GPU

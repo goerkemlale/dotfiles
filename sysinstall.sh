@@ -23,7 +23,7 @@ apt-fast install linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-
 # publii
 
 # Coding
-INS_CODING=""
+INS_CODING="yq jq bat exa tmux"
 bash ./sys/coding/install_docker.sh
 bash ./sys/coding/install_asdf.sh
 bash ./sys/coding/install_neovim.sh
