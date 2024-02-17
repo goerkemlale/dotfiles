@@ -10,7 +10,7 @@ sudo /bin/bash -c "$(curl -sL https://git.io/vokNn)"
 #Install Docker
 bash ./sys/install_docker.sh
 
-# Aptitude Packages
+# Apps
 # publii
 
 # Coding
