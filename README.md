@@ -10,6 +10,13 @@ cat ~/.ssh/id_ed25519.pub
 
 then give to GitHub
 
-## NeoVim
+# Gaming
 
-## KDE
+Game optimization
+## Lutris
+- **Disable Compositor:** Preferences -> Global Options -> Disable desktop effects
+- **Integrate Gamemode:** Configure -> Sys Options -> Add command prefix: gamemoderun
+- **Integrate VkBasalt:** Preferences/System preferences/System options Environmental variables:
+- **MangoHUD:** env -> mangohud %whatevergamecommand%
+Key = ENABLE_VKBASALT
+Value = 1

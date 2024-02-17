@@ -1,8 +1,16 @@
 #!/bin/bash
 
+# sources.list
+sudo apt-add-repository contrib
+sudo apt-add-repository non-free-firmware
+sudo apt-add-repository bookworm-backports
+dpkg --add-architecture i386
+
 #Essentials
 sudo apt update -y && sudo apt upgrade
 sudo apt install -y curl aria2 wget git python3 ca-certificates
+sudo apt install flatpak plasma-discover-backend-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Install apt-fast
 sudo /bin/bash -c "$(curl -sL https://git.io/vokNn)"
@@ -16,13 +24,16 @@ bash ./sys/coding/install_docker.sh
 bash ./sys/coding/install_asdf.sh
 
 # Creative
-INS_CREATIVE="kdenlive gimp"
+INS_CREATIVE="kdenlive gimp obs-studio"
 
 # Gaming
-INS_GAMING="steam discord"
+INS_GAMING="wine lutris winetricks protontricks gamemode vkbasalt mangohud mangohud:i386 goverlay vulkan-tools"
+bash ./sys/gaming/install_steam.sh
+bash ./sys/gaming/install_discord.sh
+flatpak install flathub net.davidotek.pupgui2
 
 # Media
-INS_MEDIA="mpv calibre ktorrent"
+INS_MEDIA="mpv calibre"
 
 # Personal
 INS_PERSONAL="keepass-xc"
