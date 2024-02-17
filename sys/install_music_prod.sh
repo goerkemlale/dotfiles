@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Change Working Directory for external sh call
+cd "$(dirname "$0")"
+
 # ardour
 
 # vital surgext synth1 dexed

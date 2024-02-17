@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Change Working Directory for external sh call
+cd "$(dirname "$0")"
+
 #Install Docker
 DOCKERDEPR="docker.io docker-doc docker-compose podman-docker containerd runc"
 DOCKERDEB="https://download.docker.com/linux/debian"

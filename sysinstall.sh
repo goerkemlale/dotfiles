@@ -41,7 +41,7 @@ flatpak install flathub net.davidotek.pupgui2
 INS_MEDIA="mpv calibre"
 
 # Personal
-INS_PERSONAL="keepass-xc"
+INS_PERSONAL="keepassxc"
 bash ./sys/install.logseq.sh
 
 # Utilities

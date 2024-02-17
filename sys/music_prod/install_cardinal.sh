@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Change Working Directory for external sh call
+cd "$(dirname "$0")"
+
 # Cardinal VCV Rack
 
 CARDINALV=$(wget -qO- https://api.github.com/repos/DISTRHO/Cardinal/releases/latest | grep -o '"tag_name": "[^"]*' | cut -d'"' -f4)

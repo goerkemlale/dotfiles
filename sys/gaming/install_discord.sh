@@ -1,6 +1,9 @@
 #!/bin/bash
 
-sudo apt-fast install libatomic1 libnotify4 libnspr4 libnss3 libxtst6
+# Change Working Directory for external sh call
+cd "$(dirname "$0")"
+
+sudo apt-fast -y install libatomic1 libnotify4 libnspr4 libnss3 libxtst6
 
 URL="https://discord.com/api/download?platform=linux&format=deb"
 

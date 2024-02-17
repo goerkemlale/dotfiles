@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Change Working Directory for external sh call
+cd "$(dirname "$0")"
+
 # Install ZynAddSubFx
 
 git clone https://github.com/zynaddsubfx/zyn-fusion-build zyn-fusion-build
