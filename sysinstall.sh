@@ -7,9 +7,9 @@ sudo apt-add-repository -y bookworm-backports
 dpkg --add-architecture i386
 
 #Essentials
-sudo apt update -y && sudo apt upgrade
+sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y curl aria2 wget git python3 python3-venv ca-certificates flatpak plasma-discover-backend-flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists -y flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Install apt-fast
 export PATH=$PATH:/usr/local/sbin/
@@ -22,27 +22,11 @@ apt-fast install -y linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvid
 # Apps
 # publii
 
-# Coding
-INS_CODING="yq jq bat exa tmux"
-bash ./sys/coding/install_docker.sh
-bash ./sys/coding/install_asdf.sh
-bash ./sys/coding/install_neovim.sh
-
-# Creative
+INS_CODING="yq jq bat exa tmux gcc clang make"
 INS_CREATIVE="kdenlive gimp obs-studio"
-
-# Gaming
 INS_GAMING="wine lutris winetricks protontricks gamemode vkbasalt mangohud mangohud:i386 goverlay vulkan-tools"
-bash ./sys/gaming/install_steam.sh
-bash ./sys/gaming/install_discord.sh
-flatpak install flathub net.davidotek.pupgui2
-
-# Media
 INS_MEDIA="mpv calibre"
-
-# Personal
 INS_PERSONAL="keepassxc"
-bash ./sys/install.logseq.sh
 
 # Utilities
 # INS_UTIL=""
@@ -50,9 +34,22 @@ bash ./sys/install.logseq.sh
 # Translation-Localization
 # INS_TRAN="omegat okapi anki"
 
-
 apt-fast -y install $INS_CODING $INS_CREATIVE $INS_GAMING $INS_MEDIA $INS_PERSONAL
 
+# Apps that need manual care
 
-# MUSIC PRODUCTION
+# Coding
+bash ./sys/coding/install_docker.sh
+bash ./sys/coding/install_asdf.sh
+bash ./sys/coding/install_neovim.sh
+
+# Gaming
+bash ./sys/gaming/install_steam.sh
+bash ./sys/gaming/install_discord.sh
+flatpak install -y flathub net.davidotek.pupgui2
+
+# Personal
+bash ./sys/install.logseq.sh
+
+# Music Production
 bash ./sys/install_music_prod.sh
