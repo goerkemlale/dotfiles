@@ -14,8 +14,6 @@ LOC=$(wget --no-verbose --method=HEAD --output-file - $URL)
 # Extract the URL from the result, stripping the irrelevant stuff.
 URL=$(cut "--delimiter= " --fields=4 <<< "$LOC")
 
-# Optional: downoad the actual file.
 wget -nc "$URL"
 
 sudo dpkg -i discord*
-

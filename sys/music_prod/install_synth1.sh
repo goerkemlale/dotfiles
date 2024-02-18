@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Synth1 by Ichiro Toda
-
 # Change Working Directory for external sh call
 cd "$(dirname "$0")"
 
-wget https://daichilab.sakura.ne.jp/softsynth/Synth1V113beta3.zip
+# Synth1 by Ichiro Toda
+
+wget -O synth1.zip https://daichilab.sakura.ne.jp/softsynth/Synth1V113beta3.zip
+unzip synth1.zip -d ~/.vst2

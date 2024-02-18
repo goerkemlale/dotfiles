@@ -9,16 +9,14 @@ CARDINALV=$(wget -qO- https://api.github.com/repos/DISTRHO/Cardinal/releases/lat
 
 CARDINALURL="https://github.com/DISTRHO/Cardinal/releases/latest/download/Cardinal-linux-x86_64-$CARDINALV.tar.gz"
 
-wget "$CARDINALURL"
+wget -O cardinalsetup.tar.gz "$CARDINALURL"
 
-mkdir cardinal
+tar -xf cardinalsetup.tar.gz --one-top-level
 
-#tar -xf 
+cp -r ./cardinalsetup/Cardinal.lv2/ ~/.lv2/Cardinal.lv2/
+cp -r ./cardinalsetup/Cardinal.vst/ ~/.vst/Cardinal.vst/
+cp -r ./cardinalsetup/Cardinal.vst3/ ~/.vst3/Cardinal.vst3/
+cp -r ./cardinalsetup/Cardinal.clap/ ~/.clap/Cardinal.clap/
 
-cp ./Cardinal.lv2/ ~/.lv2/Cardinal.lv2/
-cp ./Cardinal.vst/ ~/.vst/Cardinal.vst/
-cp ./Cardinal.vst3/ ~/.vst3/Cardinal.vst3/
-cp ./Cardinal.clap/ ~/.clap/Cardinal.clap/
-
-cp ./CardinalFX.lv2/ ~/.lv2/CardinalFX.lv2/
-cp ./CardinalFX.vst3/ ~/.vst3/CardinalFX.vst3/
+cp -r ./cardinalsetup/CardinalFX.lv2/ ~/.lv2/CardinalFX.lv2/
+cp -r ./cardinalsetup/CardinalFX.vst3/ ~/.vst3/CardinalFX.vst3/

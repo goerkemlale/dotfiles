@@ -5,21 +5,27 @@ cd "$(dirname "$0")"
 
 # ardour
 
-# vital surgext synth1 dexed
+# vital dexed
 # tx16wx/zampler/samplv1/LinuxSampler
-# calf audio fx/reaplugs?/melda
+# calf audio fx/reaplugs?/melda lsp-plugin
 # bbc discovery VPO VSCO BPB'de bri tane Spitfire DSK
 
-mkdir ~/.vst3
-mkdir ~/.lv2
-mkdir ~/.vst
-mkdir ~/.clap
+sudo mkdir ~/.vst3/
+sudo mkdir ~/.lv2/
+sudo mkdir ~/.vst/
+sudo mkdir ~/.clap/
 
 # ZynAddSubFX
-bash ./music_prod/install_zyn.sh
+sudo bash ./music_prod/install_zyn.sh
 
 # Cardinal VCV Rack
-bash ./music_prod/install_cardinal.sh
+sudo bash ./music_prod/install_cardinal.sh
 
 # Synth1 by Ichiro Toda
-bash ./music_prod/install.synth1.sh
+sudo bash ./music_prod/install.synth1.sh
+
+# Surge XT
+sudo bash ./music_prod/install_surgext.sh
+
+# Yabridge
+sudo bash ./music_prod/install_yabridge.sh
