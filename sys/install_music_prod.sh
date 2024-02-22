@@ -5,9 +5,7 @@ cd "$(dirname "$0")"
 
 # ardour
 
-# vital dexed
 # tx16wx/zampler/samplv1/LinuxSampler
-# calf audio fx/reaplugs?/melda lsp-plugin
 # bbc discovery VPO VSCO BPB'de bri tane Spitfire DSK
 
 sudo mkdir ~/.vst3/
@@ -27,5 +25,13 @@ sudo bash ./music_prod/install.synth1.sh
 # Surge XT
 sudo bash ./music_prod/install_surgext.sh
 
+# Dexed
+sudo bash ./music_prod/install_dexed.sh
+
+# LSPlugins
+sudo bash ./music_prod/install_lsplugins.sh
+
 # Yabridge
 sudo bash ./music_prod/install_yabridge.sh
+
+echo "Need to install Vital Synth from website. Loginware"
