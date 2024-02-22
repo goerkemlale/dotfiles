@@ -13,4 +13,4 @@ wget -O ./lsplugins.tar.gz "$LSPURL"
 
 mkdir lsplugins
 tar -zxvf lsplugins.tar.gz -C lsplugins --strip-components=1
-sudo cp -R lsplugins/usr /usr
+sudo cp -R lsplugins/usr /

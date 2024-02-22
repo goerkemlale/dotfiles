@@ -5,8 +5,7 @@ cd "$(dirname "$0")"
 
 # ardour
 
-# tx16wx/zampler/samplv1/LinuxSampler
-# bbc discovery VPO VSCO BPB'de bri tane Spitfire DSK
+# VPO VSCO BPB'de bri tane
 
 sudo mkdir ~/.vst3/
 sudo mkdir ~/.lv2/
@@ -14,24 +13,28 @@ sudo mkdir ~/.vst/
 sudo mkdir ~/.clap/
 
 # ZynAddSubFX
-sudo bash ./music_prod/install_zyn.sh
+bash ./music_prod/install_zyn.sh
 
 # Cardinal VCV Rack
-sudo bash ./music_prod/install_cardinal.sh
+bash ./music_prod/install_cardinal.sh
 
 # Synth1 by Ichiro Toda
-sudo bash ./music_prod/install.synth1.sh
+bash ./music_prod/install.synth1.sh
 
 # Surge XT
-sudo bash ./music_prod/install_surgext.sh
+bash ./music_prod/install_surgext.sh
 
 # Dexed
-sudo bash ./music_prod/install_dexed.sh
+bash ./music_prod/install_dexed.sh
 
 # LSPlugins
-sudo bash ./music_prod/install_lsplugins.sh
+bash ./music_prod/install_lsplugins.sh
 
 # Yabridge
-sudo bash ./music_prod/install_yabridge.sh
+bash ./music_prod/install_yabridge.sh
 
 echo "Need to install Vital Synth from website. Loginware"
+echo "Need to install BBC Symphony and other Spitfire LABS plugins. Loginware."
+echo "Spitfire needs to be installed within Wine (installed DXVK lib). Screen unresponsible. But inside DAW GUI is bug-free"
+echo "add new Yabridge paths: Spitfire"
+

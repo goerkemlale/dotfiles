@@ -27,14 +27,14 @@ INS_CREATIVE="kdenlive gimp obs-studio"
 INS_GAMING="wine lutris winetricks protontricks gamemode vkbasalt mangohud mangohud:i386 goverlay vulkan-tools"
 INS_MEDIA="mpv calibre"
 INS_PERSONAL="keepassxc"
-
+INS_MUSIC="samplv1-lv2"
 # Utilities
 # INS_UTIL=""
 
 # Translation-Localization
 # INS_TRAN="omegat okapi anki"
 
-apt-fast -y install $INS_CODING $INS_CREATIVE $INS_GAMING $INS_MEDIA $INS_PERSONAL
+apt-fast -y install $INS_CODING $INS_CREATIVE $INS_GAMING $INS_MEDIA $INS_PERSONAL $INS_MUSIC
 
 # Apps that need manual care
 

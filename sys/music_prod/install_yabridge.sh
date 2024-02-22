@@ -4,15 +4,18 @@
 cd "$(dirname "$0")"
 
 # Yabridge
-#
-tar -C ~/.local/share -xavf yabridge-x.y.z.tar.gz
 
+YABRIDGEV=$(wget -qO- https://api.github.com/repos/robbert-vdh/yabridge/releases/latest | grep -o '"tag_name": "[^"]*' | cut -d'"' -f4)
+
+YABRIDGEURL="https://github.com/robbert-vdh/yabridge/releases/download/$YABRIDGEV/yabridge-$YABRIDGEV.tar.gz"
+
+wget -O yabridge.tar.gz "$YABRIDGEURL"
 
 mkdir yabridge
-tar -zxvf yabridge* -C yabridge --strip-components=1
-sudo cp -R yabridge ~/.local/share 
+tar -zxvf yabridge.tar.gz -C yabridge --strip-components=1
+cp -R yabridge ~/.local/share
 
 export PATH="$PATH:$HOME/.local/share/yabridge"
-yabridgectl add "~/.vst2"
-yabridgectl add "~/.vst3"
+yabridgectl add ~/.vst2
+yabridgectl add ~/.vst3
 yabridgectl sync
