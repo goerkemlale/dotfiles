@@ -7,10 +7,10 @@ cd "$(dirname "$0")"
 
 # VPO VSCO BPB'de bri tane
 
-sudo mkdir ~/.vst3/
-sudo mkdir ~/.lv2/
-sudo mkdir ~/.vst/
-sudo mkdir ~/.clap/
+mkdir ~/.vst3/
+mkdir ~/.lv2/
+mkdir ~/.vst/
+mkdir ~/.clap/
 
 # ZynAddSubFX
 bash ./music_prod/install_zyn.sh
@@ -22,7 +22,7 @@ bash ./music_prod/install_cardinal.sh
 bash ./music_prod/install_synth1.sh
 
 # Surge XT
-bash ./music_prod/install_surgext.sh
+bash ./music_prod/install_surge.sh
 
 # Dexed
 bash ./music_prod/install_dexed.sh

@@ -15,7 +15,8 @@ mkdir yabridge
 tar -zxvf yabridge.tar.gz -C yabridge --strip-components=1
 cp -R yabridge ~/.local/share
 
-export PATH="$PATH:$HOME/.local/share/yabridge"
+echo 'export PATH="$PATH:$HOME/.local/share/yabridge"' >> ~/.bashrc
+yabridgectl add ~/.vst
 yabridgectl add ~/.vst2
 yabridgectl add ~/.vst3
 yabridgectl sync
