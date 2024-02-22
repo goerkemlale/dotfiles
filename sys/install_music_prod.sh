@@ -19,7 +19,7 @@ bash ./music_prod/install_zyn.sh
 bash ./music_prod/install_cardinal.sh
 
 # Synth1 by Ichiro Toda
-bash ./music_prod/install.synth1.sh
+bash ./music_prod/install_synth1.sh
 
 # Surge XT
 bash ./music_prod/install_surgext.sh
