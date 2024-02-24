@@ -20,7 +20,6 @@ sudo /bin/bash -c "$(curl -sL https://git.io/vokNn)"
 apt-fast install -y linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-cuda-dev nvidia-cuda-toolkit nvidiadriver-libs:i386 libnvoptix1
 
 # Apps
-# publii
 
 INS_CODING="yq jq bat exa tmux gcc clang make"
 INS_CREATIVE="kdenlive gimp obs-studio"
@@ -53,3 +52,5 @@ bash ./sys/install.logseq.sh
 
 # Music Production
 bash ./sys/install_music_prod.sh
+
+echo "Publii: Need to install manually with packaged .deb install"
