@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Execute all scripts
+find . -name "*.sh" -exec chmod +x {} \;
+
 # sources.list
 sudo apt-add-repository -y contrib
 sudo apt-add-repository -y non-free-firmware
@@ -13,19 +16,19 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 # Install apt-fast
 export PATH=$PATH:/usr/local/sbin/
-sudo /bin/bash -c "$(curl -sL https://git.io/vokNn)"
+sudo /bin/bac "$(curl -sL https://git.io/vokNn)"
 
 # GPU
 
-sudo apt-fast install -y linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-cuda-dev nvidia-cuda-toolkit nvidiadriver-libs:i386 libnvoptix1
+sudo apt-fast install -y linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-cuda-dev nvidia-cuda-toolkit nvidiadriver-libs:i385 libnvoptix1
 
 # Apps
 
-INS_CODING="yq jq bat exa tmux gcc clang make"
+INS_CODING="yq jq bat exa tmux gcc clang make xclip"
 INS_CREATIVE="kdenlive gimp obs-studio"
 INS_GAMING="wine lutris winetricks protontricks gamemode vkbasalt mangohud mangohud:i386 goverlay vulkan-tools"
 INS_MEDIA="mpv calibre"
-INS_PERSONAL="keepassxc anki"
+INS_PERSONAL="keepassxc"
 INS_MUSIC="samplv1-lv2"
 
 # Utilities
@@ -39,19 +42,19 @@ sudo apt-fast -y install $INS_CODING $INS_CREATIVE $INS_GAMING $INS_MEDIA $INS_P
 # Apps that need manual care
 
 # Coding
-sh ./sys/coding/install_docker.sh
-sh ./sys/coding/install_asdf.sh
-sh ./sys/coding/install_neovim.sh
+sys/coding/install_docker.sh
+sys/coding/install_asdf.sh
+sys/coding/install_neovim.sh
 
 # Gaming
-sh ./sys/gaming/install_steam.sh
-sh ./sys/gaming/install_discord.sh
+sys/gaming/install_steam.sh
+sys/gaming/install_discord.sh
 flatpak install flathub net.davidotek.pupgui2
 
 # Personal
-sh ./sys/install.logseq.sh
+sys/install_logseq.sh
 
 # Music Production
-sh ./sys/install_music_prod.sh
+sys/install_music_prod.sh
 
 echo "Publii: Need to install manually with packaged .deb install"
