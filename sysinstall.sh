@@ -4,12 +4,12 @@
 sudo apt-add-repository -y contrib
 sudo apt-add-repository -y non-free-firmware
 sudo apt-add-repository -y bookworm-backports
-dpkg --add-architecture i386
+sudo dpkg --add-architecture i386
 
 #Essentials
 sudo apt update -y && sudo apt upgrade -y
 sudo apt install -y curl aria2 wget git python3 python3-venv ca-certificates flatpak plasma-discover-backend-flatpak
-flatpak remote-add --if-not-exists -y flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Install apt-fast
 export PATH=$PATH:/usr/local/sbin/
@@ -17,7 +17,7 @@ sudo /bin/bash -c "$(curl -sL https://git.io/vokNn)"
 
 # GPU
 
-apt-fast install -y linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-cuda-dev nvidia-cuda-toolkit nvidiadriver-libs:i386 libnvoptix1
+sudo apt-fast install -y linux-headers-amd64 nvidia-driver firmware-misc-nonfree nvidia-cuda-dev nvidia-cuda-toolkit nvidiadriver-libs:i386 libnvoptix1
 
 # Apps
 
@@ -25,32 +25,33 @@ INS_CODING="yq jq bat exa tmux gcc clang make"
 INS_CREATIVE="kdenlive gimp obs-studio"
 INS_GAMING="wine lutris winetricks protontricks gamemode vkbasalt mangohud mangohud:i386 goverlay vulkan-tools"
 INS_MEDIA="mpv calibre"
-INS_PERSONAL="keepassxc"
+INS_PERSONAL="keepassxc anki"
 INS_MUSIC="samplv1-lv2"
+
 # Utilities
 # INS_UTIL=""
 
 # Translation-Localization
-# INS_TRAN="omegat okapi anki"
+# INS_TRAN="omegat okapi"
 
-apt-fast -y install $INS_CODING $INS_CREATIVE $INS_GAMING $INS_MEDIA $INS_PERSONAL $INS_MUSIC
+sudo apt-fast -y install $INS_CODING $INS_CREATIVE $INS_GAMING $INS_MEDIA $INS_PERSONAL $INS_MUSIC
 
 # Apps that need manual care
 
 # Coding
-bash ./sys/coding/install_docker.sh
-bash ./sys/coding/install_asdf.sh
-bash ./sys/coding/install_neovim.sh
+sh ./sys/coding/install_docker.sh
+sh ./sys/coding/install_asdf.sh
+sh ./sys/coding/install_neovim.sh
 
 # Gaming
-bash ./sys/gaming/install_steam.sh
-bash ./sys/gaming/install_discord.sh
-flatpak install -y flathub net.davidotek.pupgui2
+sh ./sys/gaming/install_steam.sh
+sh ./sys/gaming/install_discord.sh
+flatpak install flathub net.davidotek.pupgui2
 
 # Personal
-bash ./sys/install.logseq.sh
+sh ./sys/install.logseq.sh
 
 # Music Production
-bash ./sys/install_music_prod.sh
+sh ./sys/install_music_prod.sh
 
 echo "Publii: Need to install manually with packaged .deb install"
